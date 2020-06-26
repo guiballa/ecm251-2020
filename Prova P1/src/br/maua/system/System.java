@@ -1,11 +1,13 @@
 package br.maua.system;
 
 import java.util.Scanner;
+import br.maua.models.User;
 
 public class System {
     static private Scanner scanner;
-
+    static private User user;
     public static void run() {
+        user = new User("Jorge","123456", "jorge@maua.br");
         scanner = new Scanner(java.lang.System.in);
         boolean executar = true;
         int opcao;
