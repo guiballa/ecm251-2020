@@ -54,9 +54,14 @@ public class System {
                     }
                     break;
                 case 2:
-                    for (Pedido pedido : arrayPedidos){
-                        java.lang.System.out.println(pedido.toString());
+                    if(arrayPedidos.size()==0){
+                        java.lang.System.out.println("Nenhum pedido registrado");
+                    } else {
+                        for (Pedido pedido : arrayPedidos){
+                            java.lang.System.out.println(pedido.toString());
+                        }
                     }
+
                     break;
                 case 3:
                     java.lang.System.out.println("Qual o id do pedido que deseja mudar: ");
