@@ -37,8 +37,11 @@ public class Pedido {
                 ", pagamento=" + pagamento +
                 '}';
     }
-    public void MudarEstado(EstadosPedido estado){
+    public void mudarEstado(EstadosPedido estado){
         this.estado = estado;
-        
+    }
+
+    public String getId() {
+        return id;
     }
 }

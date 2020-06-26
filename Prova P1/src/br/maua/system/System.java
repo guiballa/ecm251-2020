@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import br.maua.enums.EstadosPedido;
 import br.maua.enums.ListaPagamento;
 import br.maua.models.Pedido;
 import br.maua.models.User;
@@ -58,7 +59,20 @@ public class System {
                     }
                     break;
                 case 3:
-
+                    java.lang.System.out.println("Qual o id do pedido que deseja mudar: ");
+                    int id = Integer.parseInt(scanner.nextLine());
+                    for (Pedido pedido : arrayPedidos ) {
+                        if(pedido.getId().equals(id)){
+                            java.lang.System.out.println("Qual estado deseja colocar o pedido: ");
+                            java.lang.System.out.println("0 - Realizado");
+                            java.lang.System.out.println("1 - Preparação");
+                            java.lang.System.out.println("2 - Saiu para entrega");
+                            java.lang.System.out.println("3 - Entregue");
+                            java.lang.System.out.println("4 - Devolvido");
+                            int estado = Integer.parseInt(scanner.nextLine());
+                            pedido.mudarEstado(EstadosPedido.values()[estado]);
+                        }
+                    }
                     break;
                 default:
                     java.lang.System.out.println("Opção invalida");
