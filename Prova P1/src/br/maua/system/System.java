@@ -1,5 +1,6 @@
 package br.maua.system;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -17,6 +18,7 @@ public class System {
         scanner = new Scanner(java.lang.System.in);
         boolean executar = true;
         int opcao;
+        arrayPedidos = new ArrayList<>();
         do {
             menu();
             opcao = Integer.parseInt(scanner.nextLine());
@@ -43,6 +45,7 @@ public class System {
                             java.lang.System.out.println("Metodo de pagamento não encontrado");
                         } else{
                             arrayPedidos.add(new Pedido(descrição, value, ListaPagamento.values()[escolha]));
+                            //new Pedido(descrição, value, ListaPagamento.values()[escolha]);
                         }
 
                     } else{
