@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class System {
     static private Scanner scanner;
+
     public static void run() {
         scanner = new Scanner(java.lang.System.in);
         boolean executar = true;
@@ -21,12 +22,14 @@ public class System {
                 case 2:
 
                     break;
-                case 4:
+                case 3:
 
                     break;
             }
         }while(executar);
     }
+
+
     static private void menu() {
         java.lang.System.out.println("Pizzaria o Rato que Ri:");
         java.lang.System.out.println("1 - Nova venda");
