@@ -2,10 +2,12 @@ package br.maua.system;
 
 import java.util.Scanner;
 
+import br.maua.enums.ListaPagamento;
 import br.maua.interfaces.AutenticarSenha;
+import br.maua.models.Pedidos;
 import br.maua.models.User;
 
-public class System  {
+public class System {
     static private Scanner scanner;
     static private User user;
     public static void run() {
@@ -21,15 +23,25 @@ public class System  {
                     executar = false;
                     break;
                 case 1:
-                    if(true){
-                        java.lang.System.out.println("Descreva o seu pedido:");
+                    java.lang.System.out.println("Qual a senha para cadastrar pedidos: ");
+                    String Password = scanner.nextLine();
+                    if(user.checkPassword(Password)){
+                        java.lang.System.out.println("Descreva o seu pedido: ");
                         String descrição = scanner.nextLine();
-                        java.lang.System.out.println("Fale o valor do seu pedido:");
-                        String valor = scanner.nextLine();
-
-                        java.lang.System.out.println("2 - Verificar pedidos");
-                        java.lang.System.out.println("3 - Alterar pedidos");
-                        java.lang.System.out.println("0 - Sair");
+                        java.lang.System.out.println("Fale o valor do seu pedido(xx.xx): ");
+                        float value = Float.parseFloat(scanner.nextLine());
+                        java.lang.System.out.println("Qual o seu metodo de pagamento: ");
+                        java.lang.System.out.println("0 - Dinheiro");
+                        java.lang.System.out.println("1 - Débito");
+                        java.lang.System.out.println("2 - Crédito");
+                        java.lang.System.out.println("3 - Vale alimentação");
+                        java.lang.System.out.println("4 - Vale refeição");
+                        int escolha = Integer.parseInt(scanner.nextLine());
+                        if((escolha < 0) || (escolha > 4)){
+                            new Pedidos(descrição, value, ListaPagamento.values()[escolha]);
+                        }
+                    } else{
+                        java.lang.System.out.println("Senha errada");
                     }
                     break;
                 case 2:
@@ -42,6 +54,7 @@ public class System  {
                     java.lang.System.out.println("Opção invalida");
             }
         }while(executar);
+        scanner.close();
     }
 
 

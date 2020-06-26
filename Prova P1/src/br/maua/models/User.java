@@ -1,6 +1,8 @@
 package br.maua.models;
 
-public class User {
+import br.maua.interfaces.AutenticarSenha;
+
+public class User implements AutenticarSenha {
     private String nickname, password, email;
 
     public User(String nickname, String password, String email) {
@@ -13,6 +15,8 @@ public class User {
         return nickname;
     }
 
-
-
+    @Override
+    public boolean checkPassword(String senha) {
+        return senha.equals(password);
+    }
 }
