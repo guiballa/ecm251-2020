@@ -1,15 +1,17 @@
 package br.maua.system;
 
+import java.util.List;
 import java.util.Scanner;
 
 import br.maua.enums.ListaPagamento;
-import br.maua.interfaces.AutenticarSenha;
-import br.maua.models.Pedidos;
+import br.maua.models.Pedido;
 import br.maua.models.User;
 
 public class System {
     static private Scanner scanner;
     static private User user;
+    static private List<Pedido> arrayPedidos;
+
     public static void run() {
         user = new User("Jorge","123456", "jorge@maua.br");
         scanner = new Scanner(java.lang.System.in);
@@ -28,7 +30,7 @@ public class System {
                     if(user.checkPassword(Password)){
                         java.lang.System.out.println("Descreva o seu pedido: ");
                         String descrição = scanner.nextLine();
-                        java.lang.System.out.println("Fale o valor do seu pedido(xx.xx): ");
+                        java.lang.System.out.println("Fale o valor do seu pedido(usando '.'): ");
                         float value = Float.parseFloat(scanner.nextLine());
                         java.lang.System.out.println("Qual o seu metodo de pagamento: ");
                         java.lang.System.out.println("0 - Dinheiro");
@@ -38,14 +40,19 @@ public class System {
                         java.lang.System.out.println("4 - Vale refeição");
                         int escolha = Integer.parseInt(scanner.nextLine());
                         if((escolha < 0) || (escolha > 4)){
-                            new Pedidos(descrição, value, ListaPagamento.values()[escolha]);
+                            java.lang.System.out.println("Metodo de pagamento não encontrado");
+                        } else{
+                            arrayPedidos.add(new Pedido(descrição, value, ListaPagamento.values()[escolha]));
                         }
+
                     } else{
                         java.lang.System.out.println("Senha errada");
                     }
                     break;
                 case 2:
-
+                    for (Pedido pedido : arrayPedidos){
+                        java.lang.System.out.println(pedido);
+                    }
                     break;
                 case 3:
 

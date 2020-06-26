@@ -5,13 +5,13 @@ import br.maua.enums.ListaPagamento;
 
 import java.util.Random;
 
-public class Pedidos {
+public class Pedido {
     private float valor;
     private String descrição, id;
     private EstadosPedido estado;
     private ListaPagamento pagamento;
 
-    public Pedidos(String descrição, float valor, ListaPagamento pagamento) {
+    public Pedido(String descrição, float valor, ListaPagamento pagamento) {
         this.id = geradorID();
         this.valor = valor;
         this.descrição = descrição;
