@@ -13,4 +13,6 @@ public class User {
         return nickname;
     }
 
+
+
 }

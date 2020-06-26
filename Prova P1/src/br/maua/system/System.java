@@ -1,9 +1,11 @@
 package br.maua.system;
 
 import java.util.Scanner;
+
+import br.maua.interfaces.AutenticarSenha;
 import br.maua.models.User;
 
-public class System {
+public class System  {
     static private Scanner scanner;
     static private User user;
     public static void run() {
@@ -19,7 +21,16 @@ public class System {
                     executar = false;
                     break;
                 case 1:
+                    if(true){
+                        java.lang.System.out.println("Descreva o seu pedido:");
+                        String descrição = scanner.nextLine();
+                        java.lang.System.out.println("Fale o valor do seu pedido:");
+                        String valor = scanner.nextLine();
 
+                        java.lang.System.out.println("2 - Verificar pedidos");
+                        java.lang.System.out.println("3 - Alterar pedidos");
+                        java.lang.System.out.println("0 - Sair");
+                    }
                     break;
                 case 2:
 
@@ -27,6 +38,8 @@ public class System {
                 case 3:
 
                     break;
+                default:
+                    java.lang.System.out.println("Opção invalida");
             }
         }while(executar);
     }
@@ -39,4 +52,6 @@ public class System {
         java.lang.System.out.println("3 - Alterar pedidos");
         java.lang.System.out.println("0 - Sair");
     }
+
+
 }
