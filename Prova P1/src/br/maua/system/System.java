@@ -54,7 +54,7 @@ public class System {
                     break;
                 case 2:
                     for (Pedido pedido : arrayPedidos){
-                        java.lang.System.out.println(pedido);
+                        java.lang.System.out.println(pedido.toString());
                     }
                     break;
                 case 3:

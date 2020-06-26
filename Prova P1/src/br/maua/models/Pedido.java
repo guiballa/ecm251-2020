@@ -27,7 +27,18 @@ public class Pedido {
         return idGerado;
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return "Pedido{" +
+                "valor=" + valor +
+                ", descrição='" + descrição + '\'' +
+                ", id='" + id + '\'' +
+                ", estado=" + estado +
+                ", pagamento=" + pagamento +
+                '}';
+    }
+    public void MudarEstado(EstadosPedido estado){
+        this.estado = estado;
+        
+    }
 }
