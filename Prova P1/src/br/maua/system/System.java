@@ -41,6 +41,7 @@ public class System {
                         java.lang.System.out.println("2 - Crédito");
                         java.lang.System.out.println("3 - Vale alimentação");
                         java.lang.System.out.println("4 - Vale refeição");
+                        java.lang.System.out.print("Metodo: ");
                         int escolha = Integer.parseInt(scanner.nextLine());
                         if((escolha < 0) || (escolha > 4)){
                             java.lang.System.out.println("Metodo de pagamento não encontrado");
@@ -65,7 +66,7 @@ public class System {
                     break;
                 case 3:
                     java.lang.System.out.println("Qual o id do pedido que deseja mudar: ");
-                    int id = Integer.parseInt(scanner.nextLine());
+                    String id = scanner.nextLine();
                     for (Pedido pedido : arrayPedidos ) {
                         if(pedido.getId().equals(id)){
                             java.lang.System.out.println("Qual estado deseja colocar o pedido: ");
@@ -74,8 +75,11 @@ public class System {
                             java.lang.System.out.println("2 - Saiu para entrega");
                             java.lang.System.out.println("3 - Entregue");
                             java.lang.System.out.println("4 - Devolvido");
+                            java.lang.System.out.print("Estado: ");
                             int estado = Integer.parseInt(scanner.nextLine());
                             pedido.mudarEstado(EstadosPedido.values()[estado]);
+                        } else{
+                            java.lang.System.out.println("teste");
                         }
                     }
                     break;
@@ -93,6 +97,7 @@ public class System {
         java.lang.System.out.println("2 - Verificar pedidos");
         java.lang.System.out.println("3 - Alterar pedidos");
         java.lang.System.out.println("0 - Sair");
+        java.lang.System.out.print("Opção: ");
     }
 
 
