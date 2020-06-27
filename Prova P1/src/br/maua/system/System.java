@@ -42,7 +42,7 @@ public class System {
                     String Password = scanner.nextLine();
                     if(user.checkPassword(Password)){
                         java.lang.System.out.println("Descreva o seu pedido: ");
-                        String descrição = scanner.nextLine();
+                        String descricao = scanner.nextLine();
                         java.lang.System.out.println("Fale o valor do seu pedido(usando '.'): ");
                         float value = Float.parseFloat(scanner.nextLine());
                         java.lang.System.out.println("Qual o seu metodo de pagamento: ");
@@ -56,8 +56,7 @@ public class System {
                         if((escolha < 0) || (escolha > 4)){
                             java.lang.System.out.println("Metodo de pagamento não encontrado");
                         } else{
-                            arrayPedidos.add(new Pedido(descrição, value, ListaPagamento.values()[escolha]));
-                            //new Pedido(descrição, value, ListaPagamento.values()[escolha]);
+                            arrayPedidos.add(new Pedido(descricao, value, ListaPagamento.values()[escolha]));
                         }
 
                     } else{

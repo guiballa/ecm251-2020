@@ -14,21 +14,21 @@ import java.util.Random;
 
 public class Pedido {
     private float valor;
-    private String descrição, id;
+    private String descricao, id;
     private EstadosPedido estado;
     private ListaPagamento pagamento;
 
     /**
-     * @param descrição Descrição do pedido.
+     * @param descricao Descrição do pedido.
      * @param valor Valor do pedido.
      * @param pagamento Enumeração que define o metodo de pagamento.
      * estado sempre começa em Realizado
      * id é gerado aleatóriamente
      */
-    public Pedido(String descrição, float valor, ListaPagamento pagamento) {
+    public Pedido(String descricao, float valor, ListaPagamento pagamento) {
         this.id = geradorID();
         this.valor = valor;
-        this.descrição = descrição;
+        this.descricao = descricao;
         this.estado = EstadosPedido.REALIZADO;
         this.pagamento = pagamento;
     }
@@ -48,7 +48,7 @@ public class Pedido {
     public String toString() {
         return "Pedido{" +
                 "valor=" + valor +
-                ", descrição='" + descrição + '\'' +
+                ", descrição='" + descricao + '\'' +
                 ", id='" + id + '\'' +
                 ", estado=" + estado +
                 ", pagamento=" + pagamento +
