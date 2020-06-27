@@ -13,7 +13,9 @@ public class User implements AutenticarSenha {
     private String nickname, password, email;
 
     /**
-     * Contrutor da classe User para que ela receba um nome, uma senha e um email todas as vezes que um usuario for criado.
+     * @param nickname Nome do usuario.
+     * @param password Senha do usuario.
+     * @param email Email do usuario.
      */
     public User(String nickname, String password, String email) {
         this.nickname = nickname;
