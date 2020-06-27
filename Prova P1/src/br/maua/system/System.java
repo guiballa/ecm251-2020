@@ -12,8 +12,8 @@ import br.maua.models.User;
 /**
  * Classe concreta que representa o sistema principal. Ela que vai executar o sistema.
  * @author Guilherme Ballardini - Guiballa@hotmail.com
- *  *  * @since 26/06/2020
- *  *  * @version 1.0
+ * @since 26/06/2020
+ * @version 1.0
  */
 
 public class System {

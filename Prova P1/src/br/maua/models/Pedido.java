@@ -8,8 +8,8 @@ import java.util.Random;
 /**
  * Classe concreta que representa um pedido. Ela define o que é um pedido e como se cria um.
  * @author Guilherme Ballardini - Guiballa@hotmail.com
- *  *  * @since 26/06/2020
- *  *  * @version 1.0
+ * @since 26/06/2020
+ * @version 1.0
  */
 
 public class Pedido {

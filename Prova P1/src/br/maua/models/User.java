@@ -5,8 +5,8 @@ import br.maua.interfaces.AutenticarSenha;
 /**
  * Classe concreta que representa um usuario. Ela define o que é um usuario e como se criar um.
  * @author Guilherme Ballardini - Guiballa@hotmail.com
- *  *  * @since 26/06/2020
- *  *  * @version 1.0
+ * @since 26/06/2020
+ * @version 1.0
  */
 
 public class User implements AutenticarSenha {
