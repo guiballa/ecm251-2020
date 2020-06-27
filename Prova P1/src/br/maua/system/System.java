@@ -21,6 +21,9 @@ public class System {
     static private User user;
     static private List<Pedido> arrayPedidos;
 
+    /**
+     * Método run, ele vai ser o principal metodo do programa e vai funcionar até escolherem a opção 0.
+     */
     public static void run() {
         user = new User("Jorge","123456", "jorge@maua.br");
         scanner = new Scanner(java.lang.System.in);
@@ -97,7 +100,9 @@ public class System {
         scanner.close();
     }
 
-
+    /**
+     * Método menu, ele vai mostrar as opções para se navegar pelo programa quando estiver rodando ele.
+     */
     static private void menu() {
         java.lang.System.out.println("Pizzaria o Rato que Ri:");
         java.lang.System.out.println("1 - Nova venda");
